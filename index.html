@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+  <!--   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+   -->  
+
+   <link rel="stylesheet" href="calender.css">
+
+   <title>Calender</title>
+
+  </head>
+  <body class="w100" >
+
+  
+              <div class="calender_wrap" id="calender_wrap1"    data-plot='["9-10-2020"]' start-date="09-10-2020" end-date="12-15-2020">
+                <div class="calender_head">
+                  <a  class="left_calender"><i class="icN icN-Left-Sm"></i></a>
+                  <h4 class="f">
+                  <span>&nbsp;</span>
+                  <span  class="calender_month"></span>
+                  <span>&nbsp;</span>
+                  <span  class="calender_year"></span>
+                  <span>&nbsp;</span>
+                </h4>
+                  <a  class="right_calender"><i class="icN icN-Right-Sm"></i></a>
+              </div>
+          
+              <div class="calender_ins">
+                  <table class="calender_picker"></table>
+              </div>
+              
+              <p id="dates"></p>
+            </div>
+ 
+    <script src="jquery-3.5.1.min.js"></script> 
+    <script src="calender.js"></script>
+
+    <script>   
+         jQuery(document).ready(function() {
+              
+   
+
+            $('#calender_wrap1').calenderPicker(function(eve){ $('#dates').text(eve);});
+          
+           
+             
+
+          });
+
+    </script>
+  </body>
+</html>

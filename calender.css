@@ -1,0 +1,126 @@
+.calender_wrap{max-width: 250px;}
+.calender_head{display: flex;}
+.calender_head h4{flex: 1;text-align: center;}
+.calender_head a{margin-top: auto;margin-bottom: auto;display: flex;cursor: pointer;}
+.calender_head a i{margin-top: auto;margin-bottom: auto;}
+.calender_ins{}
+.calender_picker {    width: 100%;max-width: 100%; overflow: hidden;}
+.calender_picker tr{border-bottom: 2px solid transparent;border-top: 2px solid transparent;}
+.calender_picker th {text-align: center;}
+.calender_picker td.dNam{
+    font-style: normal;
+    font-weight: 700;
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+    line-height: 16px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #787885;
+}
+
+.calender_picker td {
+    text-transform: uppercase;
+    border-top: 0px!important;
+    padding: 0px!important;
+    min-width: 2rem;
+    max-width: 2rem;
+    height: 2rem;
+    padding: 5px;
+    vertical-align: middle!important;
+    text-align: center;
+font-size: 14px;
+line-height: 14px;
+font-style: normal;font-weight: 400;font-family: 'Lato', sans-serif;
+  }
+  
+.calender_picker td{position: relative;background-color: transparent;z-index: 0;}
+.calender_picker td.day.daySelect{position: relative;}
+.calender_picker td.day.daySelect::before{background-color: #F4F0DF;position:absolute;width: 100%;height: 100%;
+    left: 0;top: 0;z-index: -1;content: '';}
+.calender_picker tr .daySelect:first-child::before,
+.calender_picker tr .daySelect.fstDay::before{border-top-left-radius: 50%;border-bottom-left-radius: 50%;}
+.calender_picker tr .daySelect:last-child::before,
+.calender_picker tr .daySelect.lstDay::before{border-top-right-radius: 50%;border-bottom-right-radius: 50%;}
+.calender_picker td.day:hover{color: white;
+    cursor: pointer;}
+.calender_picker td.day:hover::after{
+    opacity:0.8;
+    background-color:#EB5757;
+    color: white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    width: 95%;
+    height: 95%;
+    position:absolute ;
+    z-index: -1;
+    content: '';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+}
+    
+.calender_picker td.day.daySelect.active{color: white;cursor: pointer;}
+.calender_picker td.day.daySelect.active::after{background-color:#EB5757;color: white;cursor: pointer;border-radius: 50%;
+    width: 95%;
+    height: 95%;
+    position:absolute ;
+    z-index: -1;
+    content: '';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+}
+.icN{
+    position: relative;
+    min-width: 21px;
+    min-height: 21px;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+}
+.icN::after{    
+    min-width: 21px;
+    min-height: 21px;
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -moz-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+i.icN.icN-Left-Sm::after{
+    width: 29px;
+    height: 28px;/* 
+    background-image: url('data:image/svg+xml,<svg width="100" height="100" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"	 viewBox="0 0 404.258 404.258" style="enable-background:new 0 0 404.258 404.258;" xml:space="preserve"><polygon points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129" fill="rgb(0, 0, 0)"/></svg>'); */
+    background-image: url('data:image/svg+xml,<svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">  <path d="M17.6198 20L11.6198 14L17.6198 8" stroke="rgb(189, 189, 189)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+}
+
+i.icN.icN-Right-Sm::after{
+    width: 29px;
+    height: 28px;/* 
+    background-image: url('data:image/svg+xml,<svg width="100" height="100" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"	 viewBox="0 0 404.258 404.258" style="enable-background:new 0 0 404.258 404.258;" xml:space="preserve"><polygon points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129" fill="rgb(0, 0, 0)"/></svg>'); */
+    background-image: url('data:image/svg+xml,<svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.3484 20L17.3484 14L11.3484 8" stroke="rgb(189, 189, 189)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>')!important;
+}
