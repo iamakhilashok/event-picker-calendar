@@ -1,2 +1,2 @@
-# event-picker-calender
- A calendar for choosing days of an event for tickets
+# event-picker-calendar
+ A calendar for choosing days of an event for booking tickets
