@@ -76,8 +76,17 @@
                 
 
               if ($nwDate>=$starTimeZero && $nwDate<=$endTimeZero){
-                  var $cData = $cMnt+'-'+$cDat+'-'+d.getFullYear();
-                  $cal[$i].push('<td class="day  daySelect '+$ifFnd+' '+idChecked($cData)+'" c-data="'+$cData+'">' + $cDat + '</td>');
+                  var $cData = $cMnt+'-'+$cDat+'-'+d.getFullYear(); 
+                var $toDaY = new Date();     
+                  $toDaY.setHours(0,0,0,0);            
+                  var $isNotToday="";
+                  if($nwDate < $toDaY){            
+                    $isNotToday="notSelect";
+                  }else{            
+                    $isNotToday="selectR";
+                  }
+
+                  $cal[$i].push('<td class="day  daySelect '+$isNotToday+' '+$ifFnd+' '+idChecked($cData)+'" c-data="'+$cData+'">' + $cDat + '</td>');
                 }else{
                   $cal[$i].push('<td class="day">' + $cDat + '</td>');
                 }
@@ -105,7 +114,7 @@
     $(document).on("click",'#'+($this.attr('id'))+' .left_calender', function (event) {
       $('#'+($this.attr('id'))+' .calender_picker').text('');
       if ($currentDate.getMonth() === 0) {
-        $currentDate = new Date(currentDate.getFullYear() - 1, 11);        
+        $currentDate = new Date($currentDate.getFullYear() - 1, 11);        
         generateCalendar($currentDate);
       } else {
         $currentDate = new Date($currentDate.getFullYear(),$currentDate.getMonth() - 1); 
