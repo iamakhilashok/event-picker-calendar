@@ -67,7 +67,10 @@ font-style: normal;font-weight: 400;font-family: 'Lato', sans-serif;
     -ms-transform: translate(-50%,-50%);
     -o-transform: translate(-50%,-50%);
 }
-    
+.calender_picker td.day.notSelect:hover{color: black;cursor: not-allowed;}
+.calender_picker td.day.notSelect:hover::after{background-color:rgba(143, 143, 143, 0.685);}
+.calender_picker td.day.daySelect.notSelect::before{background-color:rgb(143, 143, 143);}
+
 .calender_picker td.day.daySelect.active{color: white;cursor: pointer;}
 .calender_picker td.day.daySelect.active::after{background-color:#EB5757;color: white;cursor: pointer;border-radius: 50%;
     width: 95%;
